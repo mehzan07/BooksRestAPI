@@ -1,4 +1,4 @@
-name : NetCore-ProductMicroservice-CI
+name : NetCore-BooksRestAPI-CI
 trigger:
   branches:
     include:
