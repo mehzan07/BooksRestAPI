@@ -45,6 +45,20 @@ steps:
   displayName: 'Publish BooksRestAPI'
   condition: and(succeeded(), ne(variables['Build.Reason'],'PullRequest'))
   
+- task: PublishBuildArtifacts@1
+  inputs:
+    pathToPublish: '$(Build.ArtifactStagingDirectory)'
+    artifactName: BooksRestAPIArtfact
+  displayName: 'PublishBuildArtifacts for BooksRestAPI'
+
+- task: DownloadBuildArtifacts@0
+  inputs: 
+    buildType: 'current'
+    downloadType: 'single'
+    artifactName: 'BooksRestAPIArtfact'
+    downloadPath: '$(System.ArtifactDirectory)'
+  displayName: 'DownloadBuildArtifacts for BooksRestAPiI'
+  
 
     
     
