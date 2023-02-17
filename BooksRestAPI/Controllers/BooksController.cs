@@ -3,6 +3,7 @@ using BooksRestAPI.Models.DataAccess.Contract;
 using BooksRestAPI.Models.Entities;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace BooksRestAPI.Controllers
 {

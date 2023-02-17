@@ -5,7 +5,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace BooksRestAPI.Models.DataAccess.Implementation
 {
-
         public class BookRepo : IBookRepo
         {
             private readonly BookDBContext bookDBContext;
@@ -84,5 +83,9 @@ namespace BooksRestAPI.Models.DataAccess.Implementation
             {
                 return bookDBContext.Books.Any(e => e.Id == id);
             }
+        public void Save()
+        {
+            bookDBContext.SaveChanges();
         }
+    }
     }

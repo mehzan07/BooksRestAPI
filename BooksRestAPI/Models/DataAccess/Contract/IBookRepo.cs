@@ -11,5 +11,6 @@ namespace BooksRestAPI.Models.DataAccess.Contract
         Task<IActionResult> PutBook(int id, Book book);
         Task<ActionResult<Book>> PostBook(Book book);
         Task<IActionResult> DeleteBook(int id);
+        void Save();
     }
 }
