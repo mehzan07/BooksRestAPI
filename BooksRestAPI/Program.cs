@@ -14,9 +14,7 @@ builder.Services.AddDbContext<BookDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 
 });
-
 // Add services to the container.
-// Register the Repository:
 builder.Services.AddTransient<IBookRepo, BookRepo>();
 builder.Services.AddControllers();
 
