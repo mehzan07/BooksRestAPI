@@ -16,6 +16,7 @@ builder.Services.AddDbContext<BookDBContext>(options =>
 });
 
 // Add services to the container.
+// Register the Repository:
 builder.Services.AddTransient<IBookRepo, BookRepo>();
 builder.Services.AddControllers();
 
