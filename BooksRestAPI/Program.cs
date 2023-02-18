@@ -16,7 +16,10 @@ builder.Services.AddDbContext<BookDBContext>(options =>
 
 });
 // Add services to the container.
+builder.Services.AddOptions();
+
 builder.Services.AddTransient<IBookRepo, BookRepo>();
+builder.Services.AddScoped<IBookRepo, BookRepo>();
 builder.Services.AddControllers();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
