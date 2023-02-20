@@ -138,8 +138,6 @@ namespace BooksRestAPI.Controllers
                     return StatusCode(500);
                 }
             }
-
-
         }
     }
 
