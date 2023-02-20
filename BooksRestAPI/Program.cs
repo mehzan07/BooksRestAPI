@@ -6,8 +6,10 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.OpenApi.Models;
 using System.Reflection;
+// <summary>
 // program file in .NET 6, include all needed for Startup.cs in the .NET 5
 // This a a program for books, get, post etc.
+//</summary>
 
 var builder = WebApplication.CreateBuilder(args);
 
