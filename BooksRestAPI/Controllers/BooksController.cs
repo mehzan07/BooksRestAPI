@@ -20,13 +20,11 @@ namespace BooksRestAPI.Controllers
             }
 
         /// <summary>
-        ///     Action to retrieve all Products.
+        ///     Action to retrieve all Books.
         /// </summary>
-        /// <returns>Returns a list of all Products or an empty list, if no Product is exist</returns>
+        /// <returns>Returns a list of all Books or an empty list, if no Book is exist</returns>
         /// <response code="200">Returned if the list of Products was retrieved</response>
         /// <response code="400">Returned if the Products could not be retrieved</response>
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Book>>> GetBooks()
             {
@@ -41,15 +39,13 @@ namespace BooksRestAPI.Controllers
             }
 
         /// <summary>
-        ///     Action Get a Product.
+        ///     Action Get a Book.
         /// </summary>
         /// <param name="productId">The productId is a Prouct which should be retaind from DB </param>
         /// <returns>Returns is OK </returns>
-        /// <response code="200">Returned if the Products has been found and retained </response>
-        /// <response code="400">Returned if the Prodcut could not be found to retaind with ProductId</response>
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [HttpGet("{productId}", Name = "Get")]
+        /// <response code="200">Returned if the Book has been found and retained </response>
+        /// <response code="400">Returned if the Book could not be found to retaind with BookId</response>
+        [HttpGet("{Id}", Name = "Get")]
         public async Task<ActionResult<Book>> GetBook(int id)
             {
                 try
@@ -64,16 +60,14 @@ namespace BooksRestAPI.Controllers
             }
 
         /// <summary>
-        ///  Action: Put to update a Product in the Database
+        ///  Action: Put to update a book in the Database
         /// </summary>
-        /// <param name="product">The product is a Prouct which should be updated in DB </param>
+        /// <param name="product">The Book is a book which should be updated in DB </param>
         /// <returns>Returns is OK </returns>
-        /// <response code="200">Returned if the Product was updated </response>
-        /// <response code="400">Returned if the Prodcut could not be found with Product.Id</response>
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
+        /// <response code="200">Returned if the Book was updated </response>
+        /// <response code="400">Returned if the book could not be found with book.Id</response>
         [HttpPut("{id}")]
-            public async Task<IActionResult> PutBook(int id, Book book)
+        public async Task<IActionResult> PutBook(int id, Book book)
             {
                 try
                 {
@@ -94,14 +88,11 @@ namespace BooksRestAPI.Controllers
         /// <summary>
         /// Action: Post to create a new product in the database.
         /// </summary>
-        /// <param name="product">Model to create a new Product</param>
-        /// <returns>Returns the created product</returns>
-        /// <response code="200">Returned if the product was created</response>
-        /// <response code="400">Returned if the model couldn't be parsed or the product couldn't be saved</response>
+        /// <param name="book">Model to create a new book</param>
+        /// <returns>Returns the created book</returns>
+        /// <response code="200">Returned if the book was created</response>
+        /// <response code="400">Returned if the model couldn't be parsed or the book couldn't be saved</response>
         /// <response code="422">Returned when the validation failed</response>
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]
-        [ProducesResponseType(StatusCodes.Status422UnprocessableEntity)]
         [HttpPost]
         public async Task<ActionResult<Book>> PostBook(Book book)
             {
@@ -117,14 +108,12 @@ namespace BooksRestAPI.Controllers
             }
 
         /// <summary>
-        ///   Action Delete: to delete a Product on the Database.
+        ///   Action Delete: to delete a book on the Database.
         /// </summary>
-        /// <param name="productId">The productId is a Prouct which should be deleted from DB </param>
+        /// <param name="productId">The bookId is a book id which should be deleted from DB </param>
         /// <returns>Returns is OK </returns>
-        /// <response code="200">Returned if the Product has been found and deleted </response>
-        /// <response code="400">Returned if the Prodcut could not be found for  deletion with ProductId</response>
-        [ProducesResponseType(StatusCodes.Status200OK)]
-        [ProducesResponseType(StatusCodes.Status400BadRequest)]  
+        /// <response code="200">Returned if the book id has been found and deleted </response>
+        /// <response code="400">Returned if the book could not be found for  deletion with bookId</response>
 
         [HttpDelete("{id}")]
             public async Task<IActionResult> DeleteBook(int id)
