@@ -5,7 +5,7 @@
 namespace BooksRestAPI.Migrations
 {
     /// <inheritdoc />
-    public partial class AddBooktoDB : Migration
+    public partial class intialcreate : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

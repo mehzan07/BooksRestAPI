@@ -1,6 +1,5 @@
 ﻿
 using BooksRestAPI.Models.Entities;
-using BooksRestAPI.Models.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace BooksRestAPI.Models

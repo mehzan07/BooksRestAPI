@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BooksRestAPI.Migrations
 {
     [DbContext(typeof(BookDBContext))]
-    [Migration("20230216130424_AddBooktoDB")]
-    partial class AddBooktoDB
+    [Migration("20230222005503_intialcreate")]
+    partial class intialcreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
