@@ -8,7 +8,7 @@ using Microsoft.OpenApi.Models;
 using System.Reflection;
 // <summary>
 // program file in .NET 6, include all needed for Startup.cs in the .NET 5
-// This a a program for books, get, post etc.
+// This a a program for books, get, post, put, delete 
 //</summary>
 
 var builder = WebApplication.CreateBuilder(args);
