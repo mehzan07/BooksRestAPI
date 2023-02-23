@@ -33,8 +33,8 @@ builder.Services.AddSwaggerGen(c =>
     c.SwaggerDoc("v1", new OpenApiInfo
     {
         Version = "v1",
-        Title = "Product Api",
-        Description = "A simple API to create a product",
+        Title = "Books Rest API",
+        Description = "A simple API to create a books",
         Contact = new OpenApiContact
         {
             Name = "Mehrdad Zandi",
